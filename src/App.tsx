@@ -1,7 +1,13 @@
-function App() {
+import React from 'react'
+import TodoList from './TodoList'
+
+const App: React.FC = () => {
+
+  const todos = [{id: "1", text: "finish something"}]
+
   return (
     <div className="App">
-      Hola mundo
+      <TodoList items={todos} />
     </div>
   );
 }
