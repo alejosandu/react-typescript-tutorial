@@ -10,7 +10,6 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
 
     const handleSubmit = (evt: SyntheticEvent) => {
         evt.preventDefault()
-
         const { value } = ref.current!
         props.onAddTodo(value)
     }
@@ -21,7 +20,7 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
                 <label htmlFor="todo-text" >Todo text</label>
                 <input type="text" id="todo-text" ref={ref} />
             </div>
-            <button type="button" >Add todo</button>
+            <button type="submit" >Add todo</button>
         </form>
     )
 }
